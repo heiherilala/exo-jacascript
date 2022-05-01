@@ -1,2 +1,2 @@
 # exo-jacascript
-do many axo on JS
+Do many exo on JS
