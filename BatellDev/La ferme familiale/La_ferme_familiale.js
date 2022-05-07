@@ -1,5 +1,5 @@
 
-function ContestResponse(input){
+export function ContestResponse(input){
     let firstWord = input[0].split("")
     let secondWord = input[1].split("")
     let nameArray = []
@@ -12,4 +12,3 @@ function ContestResponse(input){
     }
      return nameArray.join("")
 }
-exports.ContestResponse = ContestResponse

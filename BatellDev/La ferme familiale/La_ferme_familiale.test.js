@@ -1,6 +1,7 @@
- const { expect } = require("chai");
- const { describe } = require("mocha");
-const {ContestResponse} = require ("./La_ferme_familiale.js")
+
+ import { describe } from "mocha";
+ import { assert, expect } from "chai";
+import { ContestResponse } from "./La_ferme_familiale.js";
  describe("est ce que la fonction est juste?",() => {
      it("whould return a true value whith a simple intout",() => {
          let input = ["jri","adn"]
@@ -10,7 +11,7 @@ const {ContestResponse} = require ("./La_ferme_familiale.js")
         let input = ["eln","nhh"]
         expect(ContestResponse(input)).to.equal("enlhnh")
     })
-    it("whould return a true value whith a court intout",() => {
+    it("whould return a true value whith a small intout",() => {
         let input = ["k","l"]
         expect(ContestResponse(input)).to.equal("kl")
     })

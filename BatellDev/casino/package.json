@@ -1,12 +1,13 @@
 {
-  "name": "lafermefamiliale",
+  "name": "casino",
   "version": "1.0.0",
-  "description": "batell dev",
-  "main": "La_ferme_familiale.js",
+  "description": "",
+  "main": "casino.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
