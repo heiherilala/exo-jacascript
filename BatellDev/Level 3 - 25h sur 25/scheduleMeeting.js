@@ -37,24 +37,6 @@ export function scheduleMeeting(input) {
         return avecVirgule
     }
 
-    inputValeur.slice(1).forEach((value,index)=>{
-        objectTime[value[0].toString()]=[...objectTime[value[0].toString()],value[1]]
-    })
-
-    let newobject = {}
-    for (const key in objectTime) {
-        if (objectTime[key][0]!=null) {
-            newobject[key] = objectTime[key]
-        }
-    }
-    objectTime=newobject
-
-    for (const key in objectTime) {
-        objectTime[key].forEach((value,ind) => {
-            objectTime[key][ind]=stigtime(objectTime[key][ind])
-        })
-    }
-
     //------------------------- fonction: envele les dates d'indisponibilite sur une periode de disponobilité -------------------------------
     function diminution(bigArrayinputValeur,inputValeur) {
         let bigArray = bigArrayinputValeur
@@ -124,6 +106,7 @@ export function scheduleMeeting(input) {
         }
         return bigArray
     }
+
     //------------------------- fonction:prend une date de disponibilité de 1h ou plus sur des serie de disponibilité -------------------------------
     function whenIsTheDisponibility(disponibiliti) {
         for (const key in disponibiliti) {
@@ -131,6 +114,7 @@ export function scheduleMeeting(input) {
         }
         {return [0,0]}
     }
+
     //------------------------- fonction:coverti une date de number en string -------------------------------
     function numberToString(string) {
         if(string[0]==8.00){
@@ -155,6 +139,29 @@ export function scheduleMeeting(input) {
         number=number.replace(".",":")
         return number
     }
+
+
+
+
+
+    inputValeur.slice(1).forEach((value,index)=>{
+        objectTime[value[0].toString()]=[...objectTime[value[0].toString()],value[1]]
+    })
+
+    let newobject = {}
+    for (const key in objectTime) {
+        if (objectTime[key][0]!=null) {
+            newobject[key] = objectTime[key]
+        }
+    }
+    objectTime=newobject
+
+    for (const key in objectTime) {
+        objectTime[key].forEach((value,ind) => {
+            objectTime[key][ind]=stigtime(objectTime[key][ind])
+        })
+    }
+
 
     for(const key in objectTime){
         disponibiliti[key]=[[8.00,17.59]]
