@@ -15,6 +15,7 @@ let input = [5,"-13","2","-15","-5","14"] //-31
             if (accum < gain) {gain = accum}
         }else{accum=0}
     }
+    console.log(gain);
     return gain 
         //implement your code here using input array
     }

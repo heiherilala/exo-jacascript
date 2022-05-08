@@ -2,7 +2,7 @@
 let input =[5,"1 08:45-12:59","2 08:24-10:54","1 14:45-14:47","3 09:56-16:25","5 15:16-16:28"]
 //let input = input.slice(1).foreath(element,key=>input[key]=input[key].split(" "))
 
-export function scheduleMeeting(input) {
+export function ContestResponse(input) {
 
     let inputValeur =[]
     inputValeur[0]=input[0]
@@ -180,13 +180,14 @@ export function scheduleMeeting(input) {
             let a = key.toString()
             let b = disponibiliti[key].toString()
             stringresult = a + " " + b
+            console.log(stringresult);
             return stringresult;
             break
         }
     }
 }
 
-scheduleMeeting(input)
+ContestResponse(input)
 
 
 

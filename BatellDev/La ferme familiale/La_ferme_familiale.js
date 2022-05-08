@@ -10,5 +10,6 @@ export function ContestResponse(input){
             nameArray = [...nameArray,firstWord[i]]
         }
     }
+    console.log(nameArray.join(""));
      return nameArray.join("")
 }
