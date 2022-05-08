@@ -73,8 +73,8 @@ export function scheduleMeeting(input) {
                             else if (i==bigArray.length -1) {
                                 bigArray=[...bigArray.slice(0,i),...ancien]
                             }
-                            else if ((i!=0)&&(i==bigArray.length -1))
-                            bigArray=[...bigArray.slice(0,i),...ancien,...ancien,...bigArray.slice(i+1)]
+                            else if ((i!=0)&&(i!=bigArray.length -1))
+                            bigArray=[...bigArray.slice(0,i),...ancien,...bigArray.slice(i+1)]
                         }else{
                             if ((i==0)&&(i==bigArray.length-1)){
                                 bigArray=[0,0]
